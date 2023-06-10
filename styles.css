@@ -28,28 +28,24 @@ h2 {
 
 #searchBar {
   flex-grow: 1;
-}
-
-#searchBar {
-  width: 100%;
-  padding: 0.5em;
-  font-size: 1em;
+  padding: 12px 16px; /* Match padding with button */
+  font-size: 1em; /* Match font-size with button */
   border: 1px solid black;
-  border-radius: 6px;
+  border-radius: 6px; /* Match border-radius with button */
   box-sizing: border-box;
 }
 
 button {
-    background-color: #096bde;
-    border: none;
-    color: white;
-    padding: 12px 16px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1em;
-    border-radius: 6px;
-    cursor: pointer;
+  background-color: #096bde;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 button:hover {
@@ -88,17 +84,17 @@ header {
 }
 
 #meetingContainer .meeting {
-  width: calc(50% - 1em); /* 50% for two columns, minus half of the gap size on either side */
+  width: calc(33% - 1em);
 }
 
 #meetingContainer .meeting:first-child {
-  width: 100%; /* make the first meeting full width */
+  width: 100%;
 }
 
 .videoContainer {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  padding-top: 56.25%;
 }
 
 .videoContainer iframe,
@@ -119,7 +115,7 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: .5;
+  opacity: .3;
 }
 
 .thumbnailContainer .playButton {
@@ -139,7 +135,6 @@ header {
   background: yellow;
 }
 
-/* Additional Styles for Truncation */
 .shortSummary {
   display: -webkit-box;
   -webkit-line-clamp: 5;
@@ -151,9 +146,12 @@ header {
   display: block;
 }
 
-/* Media Query for Screen Width Less Than 768px */
 @media (max-width: 767px) {
   #meetingContainer .meeting {
     width: 100%;
+  }
+  
+  .thumbnailContainer .playButton {
+    font-size: 2em;
   }
 }
