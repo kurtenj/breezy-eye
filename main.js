@@ -24,7 +24,7 @@ function renderMeetings(meetings, container) {
                 </div>
                 <div class="infoContainer">
                     <h2>${title}</h2>
-                    <p>${summary}</p>
+                    <p class="${container.firstChild ? 'shortSummary' : 'fullSummary'}">${summary}</p>
                     <button ${meeting.notesLink ? `onclick="window.open('${meeting.notesLink}', '_blank')"` : 'disabled'}>${meeting.notesLink ? 'View Meeting Minutes' : 'Minutes Unavailable'}</button>
                 </div>
             </div>`;
@@ -54,6 +54,12 @@ fetch('meetings.json')
             });
 
             renderMeetings(filteredMeetings, meetingContainer);
+        });
+
+        document.getElementById('clearButton').addEventListener('click', () => {
+            searchTermGlobal = '';
+            document.getElementById('searchBar').value = '';
+            renderMeetings(originalData, meetingContainer);
         });
     })
     .catch(error => console.error('Error:', error));

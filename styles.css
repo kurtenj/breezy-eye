@@ -18,6 +18,18 @@ h2 {
   font-size: 1.3em;
 }
 
+#searchContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+#searchBar {
+  flex-grow: 1;
+}
+
 #searchBar {
   width: 100%;
   padding: 0.5em;
@@ -35,8 +47,17 @@ button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 12px;
+    font-size: 1em;
     border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+  background-color: #0a4c8e;
+}
+
+button:active {
+  background-color: #08365c;
 }
 
 button:disabled {
@@ -116,4 +137,23 @@ header {
 
 .highlight {
   background: yellow;
+}
+
+/* Additional Styles for Truncation */
+.shortSummary {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.fullSummary {
+  display: block;
+}
+
+/* Media Query for Screen Width Less Than 768px */
+@media (max-width: 767px) {
+  #meetingContainer .meeting {
+    width: 100%;
+  }
 }
