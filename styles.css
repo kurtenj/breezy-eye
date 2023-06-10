@@ -67,7 +67,7 @@ header {
 }
 
 #meetingContainer .meeting {
-  width: calc(33% - 1em); /* 50% for two columns, minus half of the gap size on either side */
+  width: calc(50% - 1em); /* 50% for two columns, minus half of the gap size on either side */
 }
 
 #meetingContainer .meeting:first-child {
