@@ -201,4 +201,9 @@ header {
   .thumbnailContainer .playButton {
     font-size: 2em;
   }
+
+  #searchContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
