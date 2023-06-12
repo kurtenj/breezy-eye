@@ -2,44 +2,69 @@
   "meetings": [
     {
       "id": 1,
+      "date": "2023-04-03",
+      "emoji":"🏛️",
+      "department": "Council",
+      "summary": "The agenda consisted of various items for discussion. Under the Consent Agenda, the approval of claims totaling $96,270.41, comprising physical checks 138278 - 138369, was addressed. Additionally, appointments were made to the Cemetery Commission, with Darlene Erickson and Lisa Baer being appointed. The approval of the Sourcewell Community Impact Funding Grant was also included in the Consent Agenda. The Personal & Finance Committee presented their report, which involved considering a Request for Proposal (RFP) for a Health Insurance Broker and discussing the 2023 Tort Liability Waiver. In terms of new business, there was a request from the airport for the use of tables and chairs. Under old business, the direction on the continuation of the Disc Golf Course Expansion was discussed.",
+      "videoLink": "https://www.youtube.com/watch?v=aJcaqFgxJuw",
+      "notesLink": "https://www.cityofbreezypointmn.us/vertical/sites/%7B015800BA-D4A6-4AD6-8483-B21AF7FD9977%7D/uploads/CC_04_03_2023_Minutes.pdf",
+      "agendaLink": "https://www.cityofbreezypointmn.us/vertical/sites/%7B015800BA-D4A6-4AD6-8483-B21AF7FD9977%7D/uploads/April_3_2023_City_Council_Meeting_Agenda_Packet_-_Final_4.3.23.pdf"
+    },
+    {
+      "id": 2,
+      "date": "2023-04-13",
+      "emoji":"🌲",
+      "department": "Parks",
+      "summary": "The agenda included new and old business items. Under new business, the minutes of the March 9, 2023 Parks & Recreation Committee Regular Meeting were reviewed. Additionally, there was a discussion on roles, responsibilities, and operations. Moving on to old business, the Parks Master Plan and Capital Improvement Plan (CIP) were addressed. The meeting involved examining the progress and updates related to the Parks Master Plan and CIP.",
+      "videoLink": "https://www.youtube.com/watch?v=Fmz4I9GsbpI",
+      "notesLink": "https://www.facebook.com/BreezyPointMN/",
+      "agendaLink": "https://www.cityofbreezypointmn.us/vertical/sites/%7B015800BA-D4A6-4AD6-8483-B21AF7FD9977%7D/uploads/04.13.23_Parks__Recreation_Committee_Agenda_Packet.pdf"
+    },
+    {
+      "id": 3,
       "date": "2023-05-01",
-      "department": "🏛️ Council",
+      "emoji":"🏛️",
+      "department": "Council",
       "summary": "During the meeting, the Consent Agenda was presented, consisting of items that would not be discussed unless removed from the agenda. It was noted that items requiring expenditures of funds were either budgeted items or had been previously discussed by the City Council. The Consent Agenda included the approval of the April 3, 2023 Regular City Council Meeting Minutes, the April 19, 2023 Board of Appeal & Equalization Meeting Minutes, and the approval of claims totaling $52,056.29, which comprised physical checks 138370-138426. Additionally, a Mutual Aid Agreement with St. Louis County and the 2023-2024 Fire Services Contract were included in the Consent Agenda. The Personal & Finance Committee Report highlighted the agreement with BakerTilly for Municipal Advisor Services. The Safety & Public Works Committee Report covered the Buschmann Road Design Contract Amendment and provided an update on the project. Under new business, discussions took place regarding the acquisition of the Old Charter Communications Building. The City Council also planned to hold a workshop to review the City Hall Facility Assessment Report. Additionally, the classification of tax-forfeited properties and the continuation of the Local Board of Appeal & Equalization were addressed.",
       "videoLink": "https://www.youtube.com/watch?v=C1ERKzEGs64",
       "notesLink": null,
       "agendaLink": null
     },
     {
-      "id": 2,
+      "id": 4,
       "date": "2023-05-09",
-      "department": "🚧 Planning",
+      "emoji":"🏗️",
+      "department": "Planning",
       "summary": "During the meeting, various new business items were addressed. Public hearings were held for Variance Application V-23-001 by Schmidt Brothers Holdings LLC, Variance Application V-23-002 by Christopher Cullen, Conditional Use Permit Application C-23-002 by Pat Pfeiffer, and Rezoning Application R-23-001 by the City of Breezy Point. These applications involved requests for construction projects and rezoning parcels within different zones. The public hearings followed a consistent format, including opening the hearing, applicant presentations, staff reviews, public input, and closing the hearing. Official actions were taken on each application.",
       "videoLink": "https://www.youtube.com/watch?v=Ct1z8Xyz-JQ",
       "notesLink": null,
       "agendaLink": null
     },
     {
-      "id": 3,
+      "id": 5,
       "date": "2023-05-11",
-      "department": "🌲 Parks",
+      "emoji":"🌲",
+      "department": "Parks",
       "summary": "During the meeting, the agenda included old business items, with a specific focus on the consideration of alternative uses for the Disc Golf Course Property. This discussion involved exploring potential alternative uses for the property instead of its current designated purpose as a disc golf course. The meeting aimed to review and evaluate different options for the property's future utilization.",
       "videoLink": "https://www.youtube.com/watch?v=U3VhyuPouoo",
       "notesLink": "https://www.facebook.com/BreezyPointMN/",
       "agendaLink": "https://www.facebook.com/BreezyPointMN/"
     },
     {
-      "id": 4,
+      "id": 6,
       "date": "2023-06-05",
-      "department": "🏛️ Council",
+      "emoji":"🏛️",
+      "department": "Council",
       "summary": "During the meeting, several items of public interest were discussed. One of them was the direction on the completion of the Disc Golf Course Expansion. The Consent Agenda was presented, which consisted of items that would not be discussed unless removed from the agenda. Items requiring funds were either budgeted or had been previously discussed by the City Council. This included the approval of the May 1, 2023 Regular City Council Meeting Minutes, the approval of claims totaling $251,484.39, which comprised checks 138427 - 138519, and the acceptance of a donation from Bonnie Supan to the Pelican Woods Cemetery through Resolution 07-2023. Other items on the Consent Agenda were the Public Assembly First Amendment Rights Policy and the New Holland Tractor Repair. Under new business, the meeting included the discussion and approval of the May 16, 2023 City Council Workshop Summary & Minutes, the May 20, 2023 City Council Retreat Minutes, communication improvements, the Pequot Lakes Fire District Capital Improvement Plan, the approval of the 2024 Budget Calendar, and a discussion on the July 2023 Meeting Date. Additionally, a City Council Workshop was scheduled to discuss bylaws and a code of conduct for all city boards, committees, and commissions. Moving on to old business, the selection of a health insurance broker was addressed. Staff reports provided updates on the city website, the Buschmann Road Project website, and the hiring process in the Police Department.",
       "videoLink": "https://www.youtube.com/watch?v=b88T9SQujeE",
       "notesLink": null,
       "agendaLink": null
     },
     {
-      "id": 5,
+      "id": 7,
       "date": "2023-06-08",
-      "department": "🌲 Parks",
+      "emoji":"🌲",
+      "department": "Parks",
       "summary": "During the meeting, there were several items of new and old business on the agenda. Under new business, the May 11, 2023 Regular Parks & Recreation Committee Meeting Minutes were reviewed and discussed. Moving on to old business, updates were provided on the Disc Golf Course, including its current status and any developments. The Parks Master Plan Update Work Plan was also discussed, outlining the progress made and any necessary actions moving forward. Additionally, the kickoff for the 2024 Parks Budget was addressed, highlighting the initiation of the budget planning process for the upcoming year.",
       "videoLink": "https://www.youtube.com/watch?v=IqRuOUooMDM",
       "notesLink": null,

@@ -89,6 +89,10 @@ button:disabled {
   font-weight: 600;
 }
 
+.emoji {
+  margin-right: 4px;
+}
+
 .tag.parks {
   border: 1px solid #016a22;
   color: #016a22;

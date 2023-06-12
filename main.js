@@ -14,7 +14,7 @@ function renderMeetings(meetings, container) {
         const videoId = new URLSearchParams(new URL(meeting.videoLink).search).get('v');
         const title = `${formatDate(meeting.date)}`.replaceAll(new RegExp(searchTermGlobal, 'gi'), (match) => `<span class="highlight">${match}</span>`);
         const summary = meeting.summary.replaceAll(new RegExp(searchTermGlobal, 'gi'), (match) => `<span class="highlight">${match}</span>`);
-        const departmentTag = `<span class="tag ${meeting.department.toLowerCase()}">${meeting.department}</span>`;
+        const departmentTag = `<span class="tag ${meeting.department.toLowerCase()}"><span class="emoji">${meeting.emoji}</span>${meeting.department}</span>`;
 
         allMeetings += `
             <div class="meeting">
