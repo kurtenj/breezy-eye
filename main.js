@@ -1,4 +1,5 @@
 let searchTermGlobal = "";
+let departmentFilterGlobal = "";
 
 function formatDate(dateString) {
     const options = { year: 'numeric', month: 'short', day: 'numeric' };
@@ -7,14 +8,15 @@ function formatDate(dateString) {
 }
 
 function renderMeetings(meetings, container) {
-    container.innerHTML = '';
+    let allMeetings = '';
 
     meetings.forEach(meeting => {
         const videoId = new URLSearchParams(new URL(meeting.videoLink).search).get('v');
-        const title = `${meeting.department} Meeting: ${formatDate(meeting.date)}`.replaceAll(new RegExp(searchTermGlobal, 'gi'), (match) => `<span class="highlight">${match}</span>`);
+        const title = `${formatDate(meeting.date)}`.replaceAll(new RegExp(searchTermGlobal, 'gi'), (match) => `<span class="highlight">${match}</span>`);
         const summary = meeting.summary.replaceAll(new RegExp(searchTermGlobal, 'gi'), (match) => `<span class="highlight">${match}</span>`);
+        const departmentTag = `<span class="tag ${meeting.department.toLowerCase()}">${meeting.department}</span>`;
 
-        container.innerHTML += `
+        allMeetings += `
             <div class="meeting">
                 <div class="videoContainer">
                     <div class="thumbnailContainer" onclick="openVideo('${videoId}', this)">
@@ -24,11 +26,17 @@ function renderMeetings(meetings, container) {
                 </div>
                 <div class="infoContainer">
                     <h2>${title}</h2>
-                    <p class="${container.firstChild ? 'shortSummary' : 'fullSummary'}">${summary}</p>
-                    <button ${meeting.notesLink ? `onclick="window.open('${meeting.notesLink}', '_blank')"` : 'disabled'}>${meeting.notesLink ? 'View Meeting Minutes' : 'Minutes Unavailable'}</button>
+                    <p class="${container === document.getElementById('featuredMeetingContainer') ? 'fullSummary' : 'shortSummary'}">${summary}</p>
+                        <div class="meetingMeta">
+                            ${departmentTag}
+                            <button ${meeting.notesLink ? `onclick="window.open('${meeting.notesLink}', '_blank')"` : 'disabled'}>${meeting.notesLink ? 'View Minutes' : 'No Minutes'}</button>
+                            <button ${meeting.agendaLink ? `onclick="window.open('${meeting.agendaLink}', '_blank')"` : 'disabled'}>${meeting.agendaLink ? 'View Agenda' : 'No Agenda'}</button>
+                        </div>
                 </div>
             </div>`;
     });
+
+    container.innerHTML = allMeetings;
 }
 
 function openVideo(videoId, thumbnailContainer) {
@@ -47,19 +55,29 @@ fetch('meetings.json')
 
         document.getElementById('searchBar').addEventListener('input', (event) => {
             searchTermGlobal = event.target.value.toLowerCase();
+            filterAndRenderMeetings(originalData, meetingContainer);
+        });
 
-            const filteredMeetings = originalData.filter(meeting => {
-                const searchableString = [meeting.title, meeting.summary].join(' ').toLowerCase();
-                return searchableString.includes(searchTermGlobal);
-            });
-
-            renderMeetings(filteredMeetings, meetingContainer);
+        document.getElementById('departmentFilter').addEventListener('change', (event) => {
+            departmentFilterGlobal = event.target.value;
+            filterAndRenderMeetings(originalData, meetingContainer);
         });
 
         document.getElementById('clearButton').addEventListener('click', () => {
-            searchTermGlobal = '';
-            document.getElementById('searchBar').value = '';
+            searchTermGlobal = "";
+            departmentFilterGlobal = "";
+            document.getElementById('searchBar').value = "";
+            document.getElementById('departmentFilter').value = "";
             renderMeetings(originalData, meetingContainer);
         });
     })
     .catch(error => console.error('Error:', error));
+
+function filterAndRenderMeetings(meetings, container) {
+    const filteredMeetings = meetings.filter(meeting => {
+        const searchableString = [meeting.title, meeting.summary].join(' ').toLowerCase();
+        return searchableString.includes(searchTermGlobal) && (departmentFilterGlobal === "" || meeting.department.toLowerCase() === departmentFilterGlobal);
+    });
+
+    renderMeetings(filteredMeetings, container);
+}

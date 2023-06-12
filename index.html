@@ -13,15 +13,24 @@
   <header>
     <h1>Breezy Point City Meetings</h1>
     <div id="searchContainer">
+      <label for="departmentFilter">Filter by Department:</label>
+      <select id="departmentFilter">
+        <option value="">All Departments</option>
+        <option value="parks">Parks</option>
+        <option value="council">Council</option>
+        <option value="planning">Planning</option>
+      </select>
+      <label for="searchBar">Search Meetings:</label>
       <input id="searchBar" type="text" placeholder="Search meetings...">
-      <button id="clearButton">Clear</button>
-  </div>
-  
+      <button id="clearButton">Clear All</button>
+    </div>
   </header>
-  <main id="meetingContainer">
-    <!-- Meeting data will be populated here -->
+  <main>
+    <section id="meetingContainer" aria-live="polite">
+      <!-- Meeting data will be populated here -->
+    </section>
   </main>
-  <footer>Created and maintained by the Breezy Point Neighborhood Alliance</footer>
+  <footer>Created and maintained by the Breezy Point Neighborhood Alliance.</footer>
+  <script src="main.js"></script>
 </body>
-<script src="main.js"></script>
 </html>
