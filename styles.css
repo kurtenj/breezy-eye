@@ -30,7 +30,7 @@ h2 {
 #searchContainer {
   display: flex;
   justify-content: space-between;
-  gap: 1em;
+  gap: 0.5em;
   align-items: center;
   margin-bottom: 2em;
 }
@@ -122,6 +122,16 @@ button:disabled {
 
 .tag.planning {
   background-color: #FFCCBC;
+}
+
+#siteLogo {
+  height: 50px;
+  width: auto;
+  margin: 1em auto 1em 0;
+}
+
+header a {
+  display: inline-block;
 }
 
 header {
