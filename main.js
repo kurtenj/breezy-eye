@@ -29,7 +29,6 @@ function renderMeetings(meetings, container) {
                     <p class="${container === document.getElementById('featuredMeetingContainer') ? 'fullSummary' : 'shortSummary'}">${summary}</p>
                         <div class="meetingMeta">
                             ${departmentTag}
-                            <button ${meeting.notesLink ? `onclick="window.open('${meeting.notesLink}', '_blank')"` : 'disabled'}>${meeting.notesLink ? 'View Minutes' : 'No Minutes'}</button>
                             <button ${meeting.agendaLink ? `onclick="window.open('${meeting.agendaLink}', '_blank')"` : 'disabled'}>${meeting.agendaLink ? 'View Agenda' : 'No Agenda'}</button>
                         </div>
                 </div>

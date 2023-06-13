@@ -2,20 +2,28 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   font-family: 'Libre Franklin', sans-serif;
+  color: #333;
+  font-weight: 400;
+  line-height: 130%;
   padding: 1em;
+  background-color: #efefef;
 }
 
 p {
   margin: 1em 0px;
+  font-size: .9em;
 }
 
 h1 {
-  font-weight: 600;
+  font-size: 1.9em;
+  font-family: 'Libre Franklin', sans-serif;
+  color: #000;
 }
 
 h2 {
-  margin: 0;
-  font-size: 1.3em;
+  font-size: 1.2em;
+  font-family: 'Libre Franklin', sans-serif;
+  color: #000;
 }
 
 #searchContainer {
@@ -26,22 +34,27 @@ h2 {
   margin-bottom: 2em;
 }
 
-#searchBar {
+#searchBar, #departmentFilter {
   flex-grow: 1;
   padding: 8px 12px;
   font-size: .9em;
-  border: 1px solid black;
+  border: 2px solid #444;
   border-radius: 6px;
   box-sizing: border-box;
+  appearance: none; /* removes the default browser styles */
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#searchBar:focus, #departmentFilter:focus {
+  border-color: #007BFF;
 }
 
 #departmentFilter {
-  flex-grow: 1;
-  padding: 8px 12px;
-  font-size: .9em;
-  border: 1px solid black;
-  border-radius: 6px;
-  box-sizing: border-box;
+  background-image: url('chevron-down.svg');
+  background-repeat: no-repeat; 
+  background-position: right 0.5em top 50%;
+  padding-right: 20px;
 }
 
 #searchContainer label {
@@ -55,38 +68,43 @@ h2 {
 }
 
 button {
-  background-color: #096bde;
-  border: none;
-  color: white;
+  font-family: 'Roboto Mono', monospace;
+  border: 1.5px solid #ddd;
+  color: #000;
   padding: 8px 12px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: .9em;
+  font-size: .8em;
   border-radius: 6px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0a4c8e;
+  border: 1.5px solid #000;
+  transition: border-color 0.3s ease;
 }
 
 button:active {
-  background-color: #08365c;
+  background-color: #000;
+  color: #fff;
 }
 
 button:disabled {
-  background-color: #000;
-  opacity: 0.2;
+  background-color: #ddd;
+  color: #aaa;
+  border: none;
   cursor: not-allowed;
 }
 
 .tag {
-  display: inline-block;
-  padding: 6px 12px;
+  font-family: 'Roboto Mono', monospace;
+  color: #000;
+  display: flex;
+  padding: 6px 12px 6px 10px;
   border-radius: 6px;
-  font-size: 0.9em;
-  font-weight: 600;
+  font-size: 0.8em;
+  align-items: center;
 }
 
 .emoji {
@@ -94,18 +112,15 @@ button:disabled {
 }
 
 .tag.parks {
-  border: 1px solid #016a22;
-  color: #016a22;
+  background-color: #C8E6C9;
 }
 
 .tag.council {
-  border: 1px solid #096bde;
-  color: #096bde;
+  background-color: #C5CAE9;
 }
 
 .tag.planning {
-  border: 1px solid #fe4e39;
-  color: #fe4e39;
+  background-color: #FFCCBC;
 }
 
 header {
@@ -119,8 +134,7 @@ header {
   margin-bottom: 2em;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ccc;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
 }
 
 #meetingContainer {
@@ -175,11 +189,11 @@ header {
 }
 
 .infoContainer {
-  padding: 1em;
+  padding: 0 1.5em 1.5em 1.5em;
 }
 
 .highlight {
-  background: #d9e571;
+  background: #007BFF;
 }
 
 .shortSummary {
@@ -191,6 +205,11 @@ header {
 
 .fullSummary {
   display: block;
+}
+
+footer {
+  margin: 0 auto;
+  font-size: 0.9em;
 }
 
 @media (max-width: 767px) {
