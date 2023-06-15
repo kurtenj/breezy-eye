@@ -6,7 +6,9 @@ body {
   font-weight: 400;
   line-height: 130%;
   padding: 1em;
+  padding-top: 100px; /* increase padding-top to make space for the fixed nav */
   background-color: #efefef;
+  box-sizing: border-box; /* add this line */
 }
 
 p {
@@ -15,7 +17,7 @@ p {
 }
 
 h1 {
-  font-size: 1.9em;
+  font-size: 1.5em;
   font-family: 'Libre Franklin', sans-serif;
   color: #000;
   line-height: 130%;
@@ -25,6 +27,89 @@ h2 {
   font-size: 1.2em;
   font-family: 'Libre Franklin', sans-serif;
   color: #000;
+}
+
+header a {
+  display: inline-block;
+}
+
+header {
+  margin-bottom: 2em;
+}
+
+#nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 7em;
+  width: 100%;
+  z-index: 10;
+  box-sizing: border-box; /* make sure the width includes the padding */
+}
+
+nav {
+  padding: 1em 0;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #efefef;
+  transition: all 0.3s ease-in-out;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  height: 50px;
+  margin-right: 0.5em;
+  transition: all 0.3s ease-in-out; /* animate the size change */
+  padding-right: .5em;
+  padding-left: 1em;
+}
+
+nav .logo span {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #000;
+  transition: all 0.3s ease-in-out; /* animate the visibility change */
+}
+
+nav ul {
+  display: flex;
+  align-content: center;
+  gap: 3em;
+  flex-wrap: wrap;
+  margin: 0; /* remove the default margin */
+  padding: 0 1em 0 0; /* remove the default padding */
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1em;
+  font-family: 'Roboto Mono', monospace;
+}
+
+nav ul li a:hover {
+  color: #007BFF;
+}
+
+.nav-border {
+  border-bottom: 1px solid #ddd;
+}
+
+nav .logo .shrink-logo {
+  height: 30px;
+  transition: height 0.4s ease;
+}
+
+nav .logo .hide-text {
+  display: none;
 }
 
 #searchContainer {
@@ -124,20 +209,6 @@ button:disabled {
   background-color: #FFCCBC;
 }
 
-#siteLogo {
-  height: 50px;
-  width: auto;
-  margin: 1em auto 1em 0;
-}
-
-header a {
-  display: inline-block;
-}
-
-header {
-  margin-bottom: 2em;
-}
-
 .meeting {
   display: flex;
   flex-direction: column;
@@ -179,6 +250,7 @@ header {
 }
 
 .thumbnailContainer {
+  position: relative;
   background: #000;
   cursor: pointer;
 }
@@ -224,12 +296,34 @@ footer {
 }
 
 @media (max-width: 767px) {
+  body {
+    padding-top: 140px; /* increase padding-top to accommodate the stacked nav */
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav .logo {
+    margin-bottom: 1em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5em;
+  }
+
   #meetingContainer .meeting {
     width: 100%;
   }
   
   .thumbnailContainer .playButton {
-    font-size: xxx-large;
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    line-height: 50px; /* should be the same as height to center the text vertically */
+    text-align: center; /* centers the text horizontally */
   }
 
   #searchContainer {
@@ -239,5 +333,14 @@ footer {
 
   #departmentFilter {
     width: 100%;
+  }
+
+  /* Styles for making logo and text smaller on mobile */
+  nav .logo img {
+    height: 40px; 
+  }
+
+  nav .logo span {
+    font-size: 1em;
   }
 }

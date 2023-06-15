@@ -1,3 +1,21 @@
+window.onscroll = function() { scrollFunction() };
+
+function scrollFunction() {
+  var nav = document.querySelector('nav');
+  var siteLogo = document.getElementById("siteLogo");
+  var siteText = document.getElementById("siteText");
+
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    siteLogo.classList.add("shrink-logo");
+    siteText.classList.add("hide-text");
+    nav.classList.add('nav-border');  // Add border to nav bar
+  } else {
+    siteLogo.classList.remove("shrink-logo");
+    siteText.classList.remove("hide-text");
+    nav.classList.remove('nav-border');  // Remove border from nav bar
+  }
+}
+
 let searchTermGlobal = "";
 let departmentFilterGlobal = "";
 

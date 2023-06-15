@@ -13,8 +13,23 @@
 </head>
 <body>
   <header>
-    <a href="."><img id="siteLogo" src="bpna-logo.svg" alt="Breezy Point Neighborhood Alliance"></a>
-    <h1>Breezy Point City Meetings</h1>
+    <div id="nav-wrapper">
+    <nav>
+      <div class="logo">
+        <a href="."><img id="siteLogo" src="bpna-logo.svg" alt="Breezy Point Neighborhood Alliance"></a>
+        <span id="siteText">Breezy Point Neighborhood Alliance</span>
+      </div>
+      <ul>
+        <li><a href="#">Digest</a></li>
+        <li><a href="#">Meetings</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    </div>
+  </header>
+  <main>
+    <h1>City Meetings</h1>
+    <!--<p>Welcome to the meeting archives. Here, you'll find a well-organized collection of videos from various municipal meetings, including council sessions, planning discussions, and parks department gatherings. Easily search through the library of past meetings using keywords or filter meetings by department to find exactly what you're looking for. Each meeting is presented with an AI-generated summary, making it simple for you to keep up-to-date with the city's happenings. For a deeper dive into the discussions, you can access the full agenda directly from each meeting's description.</p>-->
     <div id="searchContainer">
       <label for="departmentFilter">Filter by Department:</label>
       <select id="departmentFilter">
@@ -27,8 +42,6 @@
       <input id="searchBar" type="text" placeholder="Search meetings...">
       <button id="clearButton">Clear All</button>
     </div>
-  </header>
-  <main>
     <section id="meetingContainer" aria-live="polite">
       <!-- Meeting data will be populated here -->
     </section>
