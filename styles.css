@@ -229,11 +229,15 @@ footer {
   }
   
   .thumbnailContainer .playButton {
-    font-size: 2em;
+    font-size: xxx-large;
   }
 
   #searchContainer {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  #departmentFilter {
+    width: 100%;
   }
 }
